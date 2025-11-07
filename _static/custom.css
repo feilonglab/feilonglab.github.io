@@ -1,0 +1,40 @@
+.fixed-header {
+  min-height: 4em;
+  line-height: 1.3;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.citation {
+  margin-bottom: 0.6rem;
+}
+
+/* a {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+a.reference:hover {
+  text-decoration: underline;
+}
+
+a.reference.internal {
+  color: color-mix(in srgb, var(--pst-color-primary, #1a73e8) 70%, black);
+}
+
+a.reference.external {
+  color: var(--pst-color-primary, #1a73e8);
+} */
+
+a.reference.external::after {
+  content: " ↗";
+  font-size: 0.9em;
+  color: currentColor;
+  opacity: 0.7;
+}
+
+.admonition.attention .admonition-title::after{
+  content: "📢" !important;
+}

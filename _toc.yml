@@ -1,0 +1,17 @@
+format: jb-book
+root: index
+
+chapters:
+- file: home
+  title: Home
+- file: people/index
+- file: research/index
+  sections:
+  - file: research/individual_differences
+  - file: research/templates
+  - file: research/species_systems
+  - file: research/pred_responses
+  - file: research/hyperalignment
+  - file: research/future
+- file: publications/index
+- file: join

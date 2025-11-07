@@ -1,0 +1,33 @@
+# Basic info
+title: Feilong Lab
+author: Feilong Ma, Mengxin Ran
+logo: assets/feilonglab.png
+copyright: "2025"
+
+# HTML settings
+html:
+  favicon: assets/favicon.ico
+  home_page_in_navbar: false
+  use_edit_page_button: false
+  use_repository_button: true
+  use_issues_button: false
+  baseurl: https://feilonglab.github.io/
+
+# Repository info (edit this to your GitHub repo)
+repository:
+  url: https://github.com/feilonglab/feilonglab.github.io.git
+  path_to_book: ""
+  branch: main
+
+# Sphinx theme options
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+    html_theme_options:
+      navigation_depth: 2
+      repository_url: https://github.com/feilonglab/feilonglab.github.io.git
+      use_repository_button: true
+
+# # For publications (BibTeX file)
+bibtex_bibfiles:
+  - publications/pubs.bib
