@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Predicting individualized brain responses &#8212; Feilong Lab</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=a9af1ee4" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'research/pred_responses';</script>
+    <link rel="canonical" href="https://feilonglab.github.io/research/pred_responses.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hyperalignment and the INT model" href="hyperalignment.html" />
+    <link rel="prev" title="Comparisons across species and systems" href="species_systems.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/feilonglab.png" class="logo__image only-light" alt="Feilong Lab - Home"/>
+    <script>document.write(`<img src="../_static/feilonglab.png" class="logo__image only-dark" alt="Feilong Lab - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../home.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people/index.html">People</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Research</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="individual_differences.html">Brain differences and their correlates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templates.html">Structural and functional brain templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="species_systems.html">Comparisons across species and systems</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Predicting individualized brain responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hyperalignment.html">Hyperalignment and the INT model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future.html">Ongoing and future research directions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications/index.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../join.html">Join Us</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/feilonglab/feilonglab.github.io.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/research/pred_responses.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Predicting individualized brain responses</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topographic-idiosyncrasies">Topographic idiosyncrasies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Predicting individualized brain responses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="predicting-individualized-brain-responses">
+<span id="pred-responses"></span><h1>Predicting individualized brain responses<a class="headerlink" href="#predicting-individualized-brain-responses" title="Link to this heading">#</a></h1>
+<section id="topographic-idiosyncrasies">
+<h2>Topographic idiosyncrasies<a class="headerlink" href="#topographic-idiosyncrasies" title="Link to this heading">#</a></h2>
+<p>Different brains encode the same information in distinct ways <span id="id1">[<a class="reference internal" href="species_systems.html#id16" title="James V Haxby, J Swaroop Guntupalli, Samuel A Nastase, and Ma Feilong. Hyperalignment: modeling shared information encoded in idiosyncratic cortical topographies. elife, 9:e56601, 2020. doi:https://doi.org/10.7554/eLife.56601.">Haxby <em>et al.</em>, 2020</a>]</span>.
+Across individuals, the same brain function may be implemented in different anatomical locations, while the same anatomical region may support different functions.
+These idiosyncrasies in the correspondence between function and anatomy—often referred to as topographic idiosyncrasies—pose a major challenge for studying brain function across individuals.</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<figure class="align-left" id="id2">
+<a class="reference internal image-reference" href="../_images/topographic_idiosyncrasies.png"><img alt="../_images/topographic_idiosyncrasies.png" src="../_images/topographic_idiosyncrasies.png" style="width: 400.14000000000004px; height: 245.16000000000003px;" />
+</a>
+</figure>
+<p class="sd-card-text"><strong>Fig 1. Topographic idiosyncrasies.</strong>
+Within each brain, response patterns to a given stimulus are reliable across independent measurements (top and bottom rows).
+The brain shows distinct response patterns to different stimuli (left and middle columns).
+However, across brains, response patterns to the same stimulus differ (left and right columns).
+See <span id="id3">Feilong and Zhang [<a class="reference internal" href="#id9" title="Ma Feilong and Yuqi Zhang. Advancing neural decoding with deep learning: computational neuroscience. Nature Computational Science, pages 1–2, 2025. doi:https://doi.org/10.1038/s43588-025-00837-2.">2025</a>]</span> for a discussion of how these idiosyncrasies can be resolved</p>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>Predicting individualized brain responses<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>To study these functional regions, rather than anatomical locations, researchers often use functional localizers to identify these regions in each individual brain.
+However, acquiring such data can be challenging in many studies.
+<a class="reference internal" href="hyperalignment.html"><span class="std std-doc">Hyperalignment</span></a> <span id="id5">[<a class="reference internal" href="species_systems.html#id16" title="James V Haxby, J Swaroop Guntupalli, Samuel A Nastase, and Ma Feilong. Hyperalignment: modeling shared information encoded in idiosyncratic cortical topographies. elife, 9:e56601, 2020. doi:https://doi.org/10.7554/eLife.56601.">Haxby <em>et al.</em>, 2020</a>]</span>, a functional alignment method, provides a powerful solution to this problem.
+<strong>Hyperalignment establishes functional correspondence across individuals</strong>, allowing for projecting fMRI data from one brain to another.
+The projected data, particularly when aggregated across multiple source individuals, can serve as an <strong>accurate prediction</strong> of the target individual’s brain responses to the same stimuli <span id="id6">[<a class="reference internal" href="#id15" title="Ma Feilong, Samuel A Nastase, Guo Jiahui, Yaroslav O Halchenko, M Ida Gobbini, and James V Haxby. The individualized neural tuning model: precise and generalizable cartography of functional architecture in individual brains. Imaging Neuroscience, 1:1–34, 2023. doi:https://doi.org/10.1162/imag_a_00032.">Feilong <em>et al.</em>, 2023</a>, <a class="reference internal" href="#id26" title="J Swaroop Guntupalli, Michael Hanke, Yaroslav O Halchenko, Andrew C Connolly, Peter J Ramadge, and James V Haxby. A model of representational spaces in human cortex. Cerebral cortex, 26(6):2919–2934, 2016. doi:https://doi.org/10.1093/cercor/bhw068.">Guntupalli <em>et al.</em>, 2016</a>, <a class="reference internal" href="#id28" title="James V Haxby, J Swaroop Guntupalli, Andrew C Connolly, Yaroslav O Halchenko, Bryan R Conroy, M Ida Gobbini, Michael Hanke, and Peter J Ramadge. A common, high-dimensional model of the representational space in human ventral temporal cortex. Neuron, 72(2):404–416, 2011. doi:https://doi.org/10.1016/j.neuron.2011.08.026.">Haxby <em>et al.</em>, 2011</a>, <a class="reference internal" href="#id22" title="Guo Jiahui, Ma Feilong, Matteo Visconti di Oleggio Castello, J Swaroop Guntupalli, Vassiki Chauhan, James V Haxby, and M Ida Gobbini. Predicting individual face-selective topography using naturalistic stimuli. NeuroImage, 216:116458, 2020. doi:https://doi.org/10.1016/j.neuroimage.2019.116458.">Jiahui <em>et al.</em>, 2020</a>, <a class="reference internal" href="#id17" title="Guo Jiahui, Ma Feilong, Samuel A Nastase, James V Haxby, and M Ida Gobbini. Cross-movie prediction of individualized functional topography. Elife, 12:e86037, 2023. doi:https://doi.org/10.7554/eLife.86037.">Jiahui <em>et al.</em>, 2023</a>]</span>.</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<figure class="align-left" id="int-pred">
+<img alt="../_images/INT_pred.png" src="../_images/INT_pred.png" />
+</figure>
+<p class="sd-card-text"><strong>Fig 2. Predicting individualized brain responses using the INT model.</strong>
+The top row shows the face-selectivity map and eccentricity map based on the localizer scans.
+The bottom row shows the predicted maps using the <a class="reference internal" href="hyperalignment.html"><span class="std std-doc">Individualized Neural Tuning (INT) model</span></a> <span id="id7">[<a class="reference internal" href="#id15" title="Ma Feilong, Samuel A Nastase, Guo Jiahui, Yaroslav O Halchenko, M Ida Gobbini, and James V Haxby. The individualized neural tuning model: precise and generalizable cartography of functional architecture in individual brains. Imaging Neuroscience, 1:1–34, 2023. doi:https://doi.org/10.1162/imag_a_00032.">Feilong <em>et al.</em>, 2023</a>]</span>.
+Note that the localizer-based maps are not noise-free, and the differences between the predicted and localizer-based maps partly reflect noise in the localizer data.</p>
+</div>
+</div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id8">
+<div role="list" class="citation-list">
+<div class="citation" id="id21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>James V Haxby, J Swaroop Guntupalli, Samuel A Nastase, and Ma Feilong. Hyperalignment: modeling shared information encoded in idiosyncratic cortical topographies. <em>elife</em>, 9:e56601, 2020. <a class="reference external" href="https://doi.org/https://doi.org/10.7554/eLife.56601">doi:https://doi.org/10.7554/eLife.56601</a>.</p>
+</div>
+<div class="citation" id="id15" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id6">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
+<p>Ma Feilong, Samuel A Nastase, Guo Jiahui, Yaroslav O Halchenko, M Ida Gobbini, and James V Haxby. The individualized neural tuning model: precise and generalizable cartography of functional architecture in individual brains. <em>Imaging Neuroscience</em>, 1:1–34, 2023. <a class="reference external" href="https://doi.org/https://doi.org/10.1162/imag_a_00032">doi:https://doi.org/10.1162/imag_a_00032</a>.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Ma Feilong and Yuqi Zhang. Advancing neural decoding with deep learning: computational neuroscience. <em>Nature Computational Science</em>, pages 1–2, 2025. <a class="reference external" href="https://doi.org/https://doi.org/10.1038/s43588-025-00837-2">doi:https://doi.org/10.1038/s43588-025-00837-2</a>.</p>
+</div>
+<div class="citation" id="id22" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">4</a><span class="fn-bracket">]</span></span>
+<p>Guo Jiahui, Ma Feilong, Matteo Visconti di Oleggio Castello, J Swaroop Guntupalli, Vassiki Chauhan, James V Haxby, and M Ida Gobbini. Predicting individual face-selective topography using naturalistic stimuli. <em>NeuroImage</em>, 216:116458, 2020. <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.neuroimage.2019.116458">doi:https://doi.org/10.1016/j.neuroimage.2019.116458</a>.</p>
+</div>
+<div class="citation" id="id17" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
+<p>Guo Jiahui, Ma Feilong, Samuel A Nastase, James V Haxby, and M Ida Gobbini. Cross-movie prediction of individualized functional topography. <em>Elife</em>, 12:e86037, 2023. <a class="reference external" href="https://doi.org/https://doi.org/10.7554/eLife.86037">doi:https://doi.org/10.7554/eLife.86037</a>.</p>
+</div>
+<div class="citation" id="id26" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p>J Swaroop Guntupalli, Michael Hanke, Yaroslav O Halchenko, Andrew C Connolly, Peter J Ramadge, and James V Haxby. A model of representational spaces in human cortex. <em>Cerebral cortex</em>, 26(6):2919–2934, 2016. <a class="reference external" href="https://doi.org/https://doi.org/10.1093/cercor/bhw068">doi:https://doi.org/10.1093/cercor/bhw068</a>.</p>
+</div>
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">7</a><span class="fn-bracket">]</span></span>
+<p>James V Haxby, J Swaroop Guntupalli, Andrew C Connolly, Yaroslav O Halchenko, Bryan R Conroy, M Ida Gobbini, Michael Hanke, and Peter J Ramadge. A common, high-dimensional model of the representational space in human ventral temporal cortex. <em>Neuron</em>, 72(2):404–416, 2011. <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.neuron.2011.08.026">doi:https://doi.org/10.1016/j.neuron.2011.08.026</a>.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./research"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="species_systems.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Comparisons across species and systems</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="hyperalignment.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Hyperalignment and the INT model</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topographic-idiosyncrasies">Topographic idiosyncrasies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Predicting individualized brain responses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Feilong Ma, Mengxin Ran
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
