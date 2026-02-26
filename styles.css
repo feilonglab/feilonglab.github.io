@@ -1,0 +1,1526 @@
+/* Font Awesome (used by the icon <i> tags in people/index.qmd) */
+/* Font Awesome, vendored locally so the site does not depend on a CDN.
+   Refresh with: publications/../tools/update-fontawesome.sh (see repo notes). */
+@import "assets/fontawesome/css/all.min.css";
+
+/* ------------------------------------------------------------- callouts -- */
+
+/* Quarto sets callout text to .9rem; match the surrounding body copy
+   (--bs-body-font-size: 1rem, --bs-body-line-height: 1.5) instead. */
+.callout.callout-style-default .callout-body,
+.callout.callout-style-simple .callout-body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.callout.callout-style-default > div.callout-header,
+.callout.callout-style-simple > div.callout-header {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* More breathing room above and below the title text. Quarto ships
+   padding-top: .2em with a negative margin-bottom that pulls the body up. */
+.callout.callout-titled > .callout-header,
+.callout.callout-style-default > div.callout-header,
+.callout.callout-style-simple > div.callout-header {
+  padding-top: 0.5em;
+  padding-bottom: 0.3em;
+  margin-bottom: 0;
+}
+
+/* Paragraphs and list items inside callouts pick up the same rhythm as
+   the main text rather than the tighter callout defaults. */
+.callout .callout-body p,
+.callout .callout-body li {
+  line-height: 1.5;
+}
+
+.callout .callout-body > p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------------------------- cards -- */
+
+/* Bootstrap .card, given the same lift/contrast as the MyST theme had. */
+.card {
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card-header {
+  background-color: #f0f0f0;
+}
+
+/* Equal-height headers for the research card grid, so the images below
+   them line up even when titles wrap to a different number of lines. */
+.fixed-header {
+  min-height: 4em;
+  line-height: 1.3;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pandoc wraps the title link in a <p>, whose 1rem bottom margin is part
+   of the centered flex item and pushes the text off-centre. */
+.fixed-header p {
+  margin-bottom: 0;
+}
+
+.research-card .card-header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.research-card .card-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Figure + caption blocks: a Bootstrap card wrapping a real <figure>. */
+.figure-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Two defaults have to be undone to keep the card's left-aligned, full-width
+   layout: Quarto wraps the figure in .quarto-figure-center (text-align:
+   center), and Bootstrap's .figure is display: inline-block, which together
+   would centre and shrink-wrap the figure inside its card. */
+.figure-card .quarto-figure { text-align: left; }
+
+.figure-card figure.figure {
+  display: block;
+  margin: 0;
+}
+
+/* pandoc wraps the <img> in a <p>; drop its margin so the only gap between
+   image and caption is the figcaption's own margin-top. */
+.figure-card figure p { margin: 0; }
+
+/* The caption is the last thing in a figure card, so everything between it and
+   the card's own 1rem padding is stacked wrapper spacing. Quarto gives
+   .quarto-figure a bottom margin, and inside a tabset .tab-content adds a
+   bottom padding AND a bottom margin on top of that -- which is why tabset
+   figures sat on twice as much dead space as the plain ones. Zero all three;
+   the card's padding is the only gap that should show. */
+.figure-card .quarto-figure { margin-bottom: 0; }
+
+.figure-card .panel-tabset .tab-content {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.figure-card figcaption {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-size: 0.925rem;
+  color: inherit;   /* Bootstrap greys .figure-caption; the old caption was body colour */
+  text-align: left;
+}
+
+/* Hover/focus note attached to a person's name. Pure CSS, no JS -- the People
+   page loads none. A real child element rather than a ::after bubble, because
+   the note has two lines that need different type sizes and one pseudo-element
+   cannot carry two styles. Anchored left rather than centred: an h2 sits at the
+   start of its card, so a centred bubble would overflow on narrow screens. */
+.name-tip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted currentColor;
+}
+
+.name-tip:focus-visible { outline: 2px solid rgb(115, 0, 10); outline-offset: 2px; }
+
+.name-tip-body {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.55rem);
+  width: max-content;
+  max-width: min(26rem, 85vw);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  white-space: normal;
+  /* the card centres its header below the phone breakpoint, and the bubble
+     would inherit that through the h2 */
+  text-align: left;
+  /* restate the body face and weight: the bubble hangs off an h2 and would
+     otherwise inherit its size and boldness. */
+  font-family: var(--bs-body-font-family, "Roboto", system-ui, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.35;
+  color: #333;
+  background: #fff;
+  border: 1px solid var(--frame-color);
+  border-radius: var(--box-radius);
+  padding: 0.55rem 0.85rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  z-index: 1080;
+  pointer-events: none;
+}
+
+.name-tip:hover > .name-tip-body,
+.name-tip:focus-visible > .name-tip-body {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* second line: its own block, a size down and slightly muted */
+.name-tip-sub {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-top: 0.3rem;
+}
+
+/* ------------------------------------------------------------ headshots -- */
+
+/* Photo on the left, name / role / links on the right, bio below. */
+.person-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Pandoc wraps a lone image in a <p>; keep it from adding stray margin
+   and let it size to the photo. */
+.person-header > p {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.person-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.person-info > :first-child {
+  margin-top: 0;
+}
+
+img.headshot {
+  /* Fixed box, not width:auto, so the card keeps its shape even when the
+     image is missing or still loading. All headshots are 3:4; object-fit
+     guards against one that is not. */
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  background: #f2f2f2;
+  display: block;
+  border-radius: var(--box-radius);
+  box-sizing: border-box;
+  box-shadow: 0 0 5px 1px rgb(115, 0, 10);
+  transition: transform .28s cubic-bezier(.2, .8, .2, 1), box-shadow .28s;
+}
+
+.person-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  border-bottom: none;
+}
+
+/* Stack the photo above the details on narrow screens. */
+@media (max-width: 575.98px) {
+  .person-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* align-items: center stops .person-info from stretching, so it sized itself
+     to its widest nowrap contact row -- 359px inside a 339px card, spilling
+     over both card edges and giving the page a horizontal scrollbar. Stretch it
+     back to the card width and let it shrink below its content. */
+  .person-info {
+    align-self: stretch;
+    min-width: 0;
+  }
+
+  /* Quarto's anchor link trails every heading. It is invisible until hovered
+     (opacity: 0) but still occupies ~24px of inline space, which pulls a
+     centred name about 14px off centre -- uniformly, on every card. A phone
+     has no hover to reveal it, so take it out of the line box here. */
+  .person-card h2 .anchorjs-link { display: none; }
+
+  /* The note hangs off the left edge of the name, which is fine while the name
+     starts at the left of the card. Here the name is centred, so anchoring left
+     pushed the bubble off the right of a 360px screen and gave the page a
+     horizontal scrollbar. Centre it on the name instead and cap it against the
+     viewport rather than a fixed rem width. */
+  .name-tip-body {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 80vw;
+  }
+}
+
+/* -------------------------------------------------------------- landing -- */
+
+/* Social links on the left, USC logo on the right. Bootstrap's .card is
+   already a flex container, so this just turns it on its side. */
+.intro-card {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.intro-links {
+  flex: 1 1 16rem;
+  min-width: 0;
+}
+
+.intro-links p:last-child {
+  margin-bottom: 0;
+}
+
+/* The <p> pandoc wraps around the logo image. */
+.intro-card > p {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+img.usc-logo {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* On phones the card stacks and the logo lands on its own row, where 300px
+   spans it edge to edge - and past the right padding, since the <p> wrapper is
+   flex: 0 0 auto and will not shrink. Smaller reads as a mark rather than a
+   banner, and letting the wrapper shrink keeps it inside the padding. */
+@media (max-width: 575.98px) {
+  img.usc-logo {
+    width: 200px;
+  }
+
+  .intro-card > p {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+}
+
+/* Icon glyphs sit slightly low next to text at default size. */
+.contact-links i {
+  width: 1.25em;
+  text-align: center;
+}
+
+/* Feilong carries two titles. They share one line with a comma between while
+   there is room and split onto two lines without one when there is not -- the
+   same trick the contact rows use: the comma is an absolutely positioned
+   ::before sitting in the column gap, so a title that wraps to the start of a
+   line puts the comma outside the row's box, where overflow: hidden removes
+   it. No trailing comma left hanging at a line end. */
+.person-roles {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.6rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.person-roles .role { position: relative; }
+
+.person-roles .role + .role::before {
+  content: ",";
+  position: absolute;
+  left: -0.6rem;      /* flush against the preceding title */
+}
+
+/* Contact lines on a person card.
+   Each icon + label is one atom that never splits across a line break, and a
+   pair (Google Scholar + ORCID, Bluesky + Twitter) shares a line while it fits
+   and breaks onto two lines when it does not -- which is what happens on a
+   phone.
+   The separator is the awkward part: it must show between two items on the
+   same line and vanish when they wrap apart, and CSS cannot ask whether a
+   wrap happened. So it is drawn as an absolutely positioned ::before sitting
+   in the column gap to the item's left. An item that wraps to the start of a
+   line puts that pseudo-element outside the row's content box, where
+   overflow: hidden clips it away -- no bar left dangling at either end. */
+.contact-rows { margin-bottom: 1rem; }
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.3rem;
+  overflow: hidden;
+}
+
+.contact-row .ci {
+  position: relative;
+  white-space: nowrap;
+}
+
+.contact-row .ci + .ci::before {
+  content: "|";
+  position: absolute;
+  left: -0.72rem;      /* roughly centred in the column gap */
+  color: #bbb;
+}
+
+/* ------------------------------------------------------ publications page -- */
+
+.pub-filters {
+  /* Quarto paints .column-margin content in a light grey (#848484); the panel
+     is a control surface, not marginalia, so it takes the body colour back. */
+  color: #444;
+  border: 1px solid var(--frame-color);
+  border-radius: 8px;
+  padding: 0.9rem 1rem 0.7rem;
+  margin-bottom: 1.5rem;
+  background: #fafafa;
+}
+
+.pub-filter-group { margin-bottom: 0.6rem; }
+
+/* Standing instruction at the head of the filter panel. Needs the id: Quarto
+   sets `.column-margin.column-container p { margin-bottom: 0 }`, which
+   otherwise collapses the gap under the rule and the divider reads as
+   attached to the heading below it rather than closing this block. */
+#pub-filters .pub-filter-intro {
+  margin: 0 0 0.7rem;          /* matches .pub-filter-key */
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid #ececec;
+  font-size: 0.82rem;
+  color: #000;
+  line-height: 1.4;
+}
+
+/* --- sticky filter panel in the margin --- */
+
+/* Only while the panel is in the margin column. Below Quarto's margin
+   breakpoint it reflows above the listing, where sticking it would cover the
+   entries it exists to filter.
+   Quarto gives margin wrappers .no-row-height (height: 1em), so the panel
+   overflows a 1em-tall grid item and sticky would have no travel. Spanning the
+   wrapper across every grid row gives it the full listing height to move in. */
+@media (min-width: 992px) {
+  .column-margin.column-container:has(> #pub-filters) {
+    height: initial;
+    /* main.content declares no explicit rows, so `-1` resolves back to line 1
+       and the panel lands in the title's row. A relative span walks forward
+       over the listing instead; extra implicit rows collapse to zero. */
+    grid-row-end: span 99;
+  }
+
+  /* the margin column is ~200px, so labels get smaller and truncate rather
+     than wrapping to a second line; the full label stays in the tooltip */
+  .column-margin .pub-chip {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    max-width: 100%;
+    font-size: 0.76rem;
+  }
+
+  .column-margin .pub-chip-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+  }
+
+  .column-margin .pub-chip-n { flex: 0 0 auto; }
+
+  #pub-filters {
+    position: sticky;
+    top: 4.6rem;              /* clears the ~61px fixed navbar */
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+  }
+}
+/* the id is needed here too: Quarto's `.column-margin.column-container p
+   { margin-bottom: 0 }` outranks a plain class rule and flattens the gap */
+#pub-filters .pub-filter-group > p { margin-bottom: 0.55rem; font-size: 0.9rem; color: #444; }
+
+.pub-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+/* Chips are flex items, so their automatic minimum (min-content) outranks the
+   max-width:100% above and a long topic name pushed the chip out of the filter
+   panel's padding. Let them shrink; the label wraps or ellipsises as its own
+   rules dictate. */
+.pub-chips > .pub-chip {
+  min-width: 0;
+}
+
+/* any/all switch on the Topics heading; hidden until two topics are picked */
+.pub-mode {
+  margin-left: 0.45rem;
+  padding: 0 0.35rem;
+  border: 1px solid #d7d7d7;
+  border-radius: var(--box-radius);
+  background: #fff;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #6a6a6a;
+  cursor: pointer;
+}
+
+.pub-mode[aria-pressed="true"] {
+  background: rgb(115, 0, 10);
+  border-color: rgb(115, 0, 10);
+  color: #fff;
+}
+
+.pub-chip, .pub-topic {
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  border-radius: var(--box-radius);
+  padding: 0.15rem 0.45rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
+}
+
+.pub-chip:hover, .pub-topic:hover { border-color: rgb(115, 0, 10); }
+
+/* A secondary topic is one the paper touches rather than is about. Lighter
+   text and a dashed edge keep it legible but clearly subordinate. */
+.pub-topic-secondary {
+  border-style: dashed;
+  border-color: #e0e0e0;
+  color: #767676;          /* still ~4.6:1 on white */
+}
+
+
+.pub-chip.active, .pub-topic.active {
+  background: rgb(115, 0, 10);
+  border-color: rgb(115, 0, 10);
+  color: #fff;
+}
+
+/* Both tiers read as garnet when selected; the tier shows in the depth of the
+   fill -- full garnet for primary, the lighter garnet for secondary -- and the
+   dashed edge is kept, drawn in a paler tone so it stays visible on the fill. */
+.pub-topic-secondary.active {
+  background: #b02a37;      /* lighter than the primary fill, 6.5:1 on white */
+  border-style: dashed;
+  border-color: #edc9cd;
+  color: #fff;
+}
+
+.pub-chip-n { opacity: 0.55; font-size: 0.78em; margin-left: 0.15rem; }
+.pub-chip.active .pub-chip-n { opacity: 0.8; }
+
+.pub-filter-status {
+  /* count on one line, "Clear filters" on its own beneath it -- the margin
+     column is too narrow to hold both side by side */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  font-size: 0.88rem;
+  color: #6a6a6a;
+  /* sits between the Topics heading and its chips, so no divider here */
+  margin-bottom: 0.5rem;
+}
+
+.pub-reset {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 0.85rem;
+  color: rgb(115, 0, 10);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* --- entries --- */
+
+.pub-item {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr auto;
+  gap: 0 0.9rem;
+  /* the left gutter is reserved on every entry, not just key ones, so the
+     accent rail does not shift key papers right relative to the rest */
+  padding: 0.85rem 0 0.85rem 0.7rem;
+  border-bottom: 1px solid #eee;
+  align-items: start;
+}
+
+.pub-year { font-variant-numeric: tabular-nums; opacity: 0.55; padding-top: 0.15rem; }
+
+.pub-title { font-size: 1.02rem; margin: 0 0 0.25rem; line-height: 1.35; }
+.pub-title a { text-decoration: none; }
+.pub-title a:hover { text-decoration: underline; }
+
+.pub-authors { font-size: 0.92rem; line-height: 1.55; margin-bottom: 0.15rem; color: #444; }
+.pub-venue { font-size: 0.88rem; color: #696969; }
+.pub-journal { font-style: italic; font-weight: 700; color: #444; }
+
+.pub-topics { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.4rem; }
+.pub-topic { font-size: 0.76rem; padding: 0.05rem 0.35rem; }
+
+/* URL sits inline after the venue. */
+.pub-link { margin-left: 0.6rem; }
+
+.pub-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 1px;
+  padding-top: 0.1rem;
+}
+
+/* Altmetric wraps its 64px image in an inline-block <a>, which sits on the text
+   baseline and leaves ~7.5px of descender space below it -- so the host box is
+   71.5px while the Dimensions span is exactly 64px. align-items:center then
+   centres two boxes of different heights and the donut ends up 3.75px above the
+   Dimensions badge. Collapsing the line box makes both hosts 64px.
+   Note: the <a> carries display:inline-block as an inline style, so restyling
+   the anchor from here would not win; the fix has to be on the container. */
+.pub-badges .altmetric-embed { line-height: 0; }
+
+/* Phone overrides for the two blocks above. These have to sit *after* the base
+   rules: they are the same specificity, so when they lived higher up the file
+   the base `content: ","` won and a comma showed up between titles that were on
+   separate lines. */
+@media (max-width: 575.98px) {
+  /* Titles stack and centre under the name. Centring means the second title no
+     longer starts at the row's left edge, so the comma would fall inside the
+     box instead of being clipped -- it has to be switched off explicitly. */
+  .person-roles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .person-roles .role + .role::before { content: none; }
+
+  /* Contact lines read better left-aligned, and there is no room to pair two
+     links on one line here, so each takes its own. */
+  .contact-rows { text-align: left; }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* nowrap keeps each item on one line so the "|" separators read as dividers;
+     stacked, there are no separators, and an address longer than the column was
+     running past the card edge. Stacked items are sized to fit-content, and
+     fit-content never goes below min-content - which for "jason.andrew.davis@
+     sc.edu" is the whole address, since break-word permits a break at layout
+     time but does not change the intrinsic minimum. `anywhere` does change it,
+     so the span can shrink and the address wraps. */
+  .contact-row .ci {
+    white-space: normal;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-row .ci + .ci::before { content: none; }
+
+}
+
+/* Quarto insets the sidebar toggle twice - 1em on the secondary nav plus another
+   1em on the button - putting the glyph 34px in. Drop the nav's copy so the bar's
+   contents start at 0 and the button keeps its own 1em: the glyph sits 17px in
+   and the button's box reaches the edge rather than starting there. (The
+   container's .75rem padding and the button's -0.75rem margin cancel, so the
+   nav's padding is the only thing between the button and 0.) The breadcrumb beside
+   it is padded on the right only by Quarto, so it takes the matching 1em on the
+   left. Every width, phones included.
+
+   The 17px is Quarto's `footer.footer .nav-footer, #quarto-header>nav
+   { padding-left: 1em }` -- 1em against this nav's 17px font. That selector never
+   names the nav's own class, which is why grepping for it comes up empty. It
+   carries an id, so it scores (1,0,1) and beats any plain element+class selector
+   no matter how late it loads; matching the id here scores (1,1,1) and wins
+   without !important. */
+#quarto-header > nav.quarto-secondary-nav { padding-left: 0; }
+
+#quarto-header > nav.quarto-secondary-nav .quarto-page-breadcrumbs {
+  padding-left: 1em;
+}
+
+/* --- author role markup --- */
+
+/* every key role reads the same: bold. Lab membership stays the underline. */
+.au-first,
+.au-senior,
+.au-corr-name { font-weight: 700; }
+.au-lab {
+  border-bottom: 2px solid rgb(115, 0, 10);
+  padding-bottom: 1px;
+}
+.au-corr {
+  color: var(--frame-color);
+  font-weight: 400;
+  margin-left: 0.1em;
+}
+
+/* the glyph is already raised by <sup>; keep it small enough not to crowd
+   the name, and stop <sup>'s own shrink from compounding with the icon's */
+.au-corr .fa-envelope {
+  font-size: 0.82em;
+  vertical-align: baseline;
+}
+
+@media (max-width: 575.98px) {
+  .pub-item { grid-template-columns: 1fr; }
+  .pub-year { padding-top: 0; font-size: 0.85rem; }
+  .pub-badges { padding-top: 0.5rem; }
+}
+
+/* Grid items default to `min-width: auto`, so a track never shrinks below the
+   longest unbreakable run inside it - a DOI, a URL, "hyperalignment". Below about
+   250px that pushed the entries past the listing's right edge even though the
+   grid was already down to a single column. `overflow-wrap: break-word` alone
+   cannot fix it: it breaks text during layout but leaves the intrinsic minimum
+   unchanged, which is what the track is sized from. Zeroing the minimum lets the
+   track shrink and the wrapping then does the rest. */
+.pub-item > * {
+  min-width: 0;
+}
+
+/* The research card grid on Home and the Research index is Bootstrap's 12-column
+   grid with a 1.5rem gap. The gap is fixed, so the 11 gutters alone come to 280px
+   - wider than the whole column below about 330px. The tracks then collapse to
+   zero and a card that spans all twelve is nothing but gutter, overhanging the
+   page. Stacked cards need no gutters between columns, so drop the column gap and
+   keep the row gap that separates the stacked cards. */
+@media (max-width: 575.98px) {
+  .grid {
+    column-gap: 0;
+  }
+}
+
+/* Grid items keep min-width:auto, so a long card title could still push a track
+   open even once the gutters fit. */
+.grid > [class*="g-col-"] {
+  min-width: 0;
+}
+
+/* Line the research cards up row by row. `.h-100` already makes the cards in a
+   row equally tall, but each card lays its own header out, so a title that wraps
+   to three lines where its neighbours take two pushes that card's image down and
+   the row stops reading as a row. Subgrid hands the header and the body back to
+   the outer grid as shared rows, so every header in a row is as tall as the
+   tallest title in it and the bodies start on one line. Two levels of subgrid
+   because the card sits inside Quarto's .g-col-* wrapper. Guarded: without
+   subgrid the cards keep today's independent layout. */
+@supports (grid-template-rows: subgrid) {
+  .grid > [class*="g-col-"]:has(> .research-card) {
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+  }
+
+  /* display:grid is required for the subgrid to take: Bootstrap lays .card out
+     as a column flex container, where grid-template-rows means nothing. */
+  .research-card {
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+    /* without a column the card's single implicit track is sized to its
+       content, so a long title pushed the header and body past the border */
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* --- author hover cards --- */
+
+.pub-authors .au { cursor: help; }
+.pub-authors .au:focus-visible { outline: 2px solid rgb(115, 0, 10); outline-offset: 2px; }
+
+.au-tip {
+  position: absolute;
+  z-index: 1080;
+  max-width: 22rem;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.22);
+  pointer-events: auto;
+}
+
+.au-tip[hidden] { display: none; }
+.au-tip-name { font-weight: 700; margin-bottom: 0.1rem; }
+.au-tip-roles { color: rgb(115, 0, 10); font-size: 0.8rem; margin-top: 0.2rem; }
+.au-tip-lab { font-size: 0.8rem; margin-top: 0.1rem; }
+.au-tip-affil { font-size: 0.8rem; opacity: 0.8; margin-top: 0.2rem; }
+.au-tip-orcid { font-size: 0.78rem; margin-top: 0.25rem; }
+.au-tip-orcid a { text-decoration: none; }
+
+/* --- key-papers toggle --- */
+
+.pub-filter-key { border-bottom: 1px solid #ececec; padding-bottom: 0.55rem; margin-bottom: 0.7rem; }
+
+/* The chip carries the same star that marks the entries, so the control and
+   the marker read as the same thing. */
+.pub-star { font-size: 0.85em; color: rgb(115, 0, 10); }
+.pub-chip.active .pub-star { color: #fff; }
+
+/* Key papers, always marked in place; the chip only switches filtering. */
+#listing-pubs.highlight-key .pub-item-key {
+  background: linear-gradient(90deg, rgba(115, 0, 10, 0.045), rgba(115, 0, 10, 0) 60%);
+  box-shadow: inset 3px 0 0 0 rgb(115, 0, 10);
+  border-radius: 3px;
+}
+
+#listing-pubs.highlight-key .pub-item-key .pub-title { font-weight: 600; }
+
+#listing-pubs.highlight-key .pub-item-key .pub-year::after {
+  content: "★";
+  display: block;
+  font-size: 0.75rem;
+  color: rgb(115, 0, 10);
+  line-height: 1;
+  margin-top: 0.15rem;
+}
+
+
+/* --- paper category icons --- */
+
+.pub-cat {
+  margin-right: 0.4rem;
+  font-size: 0.82em;
+  opacity: 0.75;
+  vertical-align: 1px;
+}
+
+.pub-cat-empirical { color: #4a6fa5; }
+.pub-cat-review    { color: #7d6a9c; }
+.pub-cat-data      { color: #3f7d68; }
+
+.pub-cat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 1rem;      /* tight when it wraps to one item per line */
+  font-size: 0.82rem;
+  color: #6a6a6a;
+  margin-top: 0.55rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid #ececec;
+}
+.pub-cat-legend i { margin-right: 0.3rem; }
+
+/* Instant tooltip on the per-entry category icons. The legend icons carry no
+   data-tip because they already sit beside their label.
+   font-family must be restated: the glyph comes from a Font Awesome face, and
+   ::after would otherwise inherit it and render the text as garbage. */
+.pub-cat[data-tip] { position: relative; cursor: help; }
+
+/* The icon is muted with `opacity`, and a pseudo-element cannot escape its
+   parent's opacity -- the tooltip was rendering at 75% too. Going opaque on
+   hover fixes the tooltip and doubles as hover feedback on the icon. */
+.pub-cat[data-tip]:hover { opacity: 1; }
+
+.pub-cat[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.35rem);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--bs-body-font-family, "Roboto", system-ui, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #333;
+  background: #fff;
+  border: 1px solid var(--frame-color);
+  border-radius: var(--box-radius);
+  padding: 0.2rem 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  z-index: 1080;
+  pointer-events: none;
+}
+
+/* ------------------------------------------------- garnet card framing -- */
+
+/* Person cards and the clickable research grid cards share a frame tinted
+   from the theme primary, matching the garnet glow on the headshots. Drawn
+   from --bs-primary-rgb so it follows the theme rather than hard-coding. */
+.person-card,
+.research-card,
+.intro-card,
+.figure-card {
+  border-color: var(--frame-color);
+}
+
+.research-card .card-header {
+  background-color: rgba(var(--bs-primary-rgb), 0.06);
+  border-bottom-color: rgba(var(--bs-primary-rgb), 0.2);
+}
+
+/* Overrides the neutral grey hover set earlier, which clashed with the frame. */
+.research-card:hover {
+  border-color: rgba(var(--bs-primary-rgb), 0.7);
+  box-shadow: 0 10px 15px -3px rgba(var(--bs-primary-rgb), 0.16),
+              0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------------------------------- list spacing -- */
+
+/* A little breathing room between bullets in body copy. Scoped to
+   main.content so the navbar, sidebar, TOC and the publications listing
+   (which are also <ul>s) keep their tight spacing. */
+main.content ul > li + li,
+main.content ol > li + li {
+  margin-top: 0.45rem;
+}
+
+/* Callout bodies carry lists too (Join Us, the figure-explanation note). */
+main.content .callout-body ul > li + li,
+main.content .callout-body ol > li + li {
+  margin-top: 0.45rem;
+}
+
+/* Person bios: plain prose under the header row, no callout chrome. */
+.person-bio {
+  margin-top: 0.25rem;
+}
+
+.person-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Callout outlines: Quarto draws the three non-accent sides in #dee2e6 grey.
+   Match the garnet-tinted frame used on the person / research / intro cards
+   so every boxed element on a page shares one boundary colour. */
+.callout.callout-style-default,
+.callout.callout-style-simple {
+  border-top: 1px solid var(--frame-color);
+  border-right: 1px solid var(--frame-color);
+  border-bottom: 1px solid var(--frame-color);
+  /* left stays the 5px coloured accent that marks the callout type */
+}
+
+/* Quarto underlines h2 with `1px solid #dee2e6`. Black instead, so the
+   section rules read as structure rather than as another garnet boundary.
+   Sidebar/TOC headings already set border-bottom:0, so scoping to
+   main.content keeps this out of the chrome. */
+main.content h2 {
+  border-bottom-color: #000;
+  padding-bottom: 0.15rem;   /* Bootstrap ships .5rem; the rule sat too low */
+}
+
+/* Materia underlines every link but sets no thickness, so browsers scale it
+   with the font size and it reads heavy. Pin it to a hairline. Scoped to
+   main.content: navbar and sidebar links set text-decoration:none anyway. */
+main.content a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+/* ----------------------------------------------------- corner radius -- */
+
+/* One radius for every boxed element: cards, the publications filter panel,
+   callouts, the topic chips and the headshots. */
+:root {
+  --box-radius: 8px;
+  --frame-color: #9C1622;   /* lighter garnet; full #73000A reads too heavy */
+}
+
+.card,
+.pub-filters,
+.callout {
+  border-radius: var(--box-radius);
+}
+
+/* The callout border and its tinted header are two separately painted boxes,
+   so any mismatch in their radii shows as a sliver at the top-right corner.
+   Clipping the callout makes the header follow the border exactly. */
+.callout {
+  overflow: hidden;
+}
+
+/* Quarto rounds the callout header corners separately, derived from the old
+   0.25rem; without these the header stays square inside the rounded callout. */
+.callout.callout-style-default > .callout-header {
+  border-top-right-radius: calc(var(--box-radius) - 1px);
+}
+
+/* Research section sidebar: Quarto packs the entries at margin-bottom .2em,
+   which reads as one block when the titles wrap to two lines. */
+#quarto-sidebar .sidebar-item {
+  margin-bottom: 0.9em;
+}
+
+/* Materia gives the navbar 1rem of vertical padding, making it ~92px tall.
+   Cut the whitespace only - the logo stays at its original 24px and the link
+   text is untouched; just the padding around them is reduced. */
+.navbar {
+  --bs-navbar-padding-y: 0.47rem;
+  --bs-navbar-brand-padding-y: 0;
+}
+
+/* Long words - "Hyperalignment", "Individualized" - are wider than the column
+   below about 260px and used to spill past the right gutter rather than break.
+   No real phone is that narrow (320px is the floor), but a zoomed-in view is,
+   and breaking costs nothing at any other width. */
+main.content {
+  overflow-wrap: break-word;
+}
+
+/* The brand is a flex row of two anchors, mark and wordmark. Squeezed, the mark's
+   anchor shrank too, and since Quarto gives the image `object-fit: cover` that
+   crops the disk rather than scaling it. Hold the mark at its size and let the
+   wordmark take the truncation on its own - it already ellipsises. */
+.navbar-brand-container > .navbar-brand-logo {
+  flex-shrink: 0;
+}
+
+/* Hold the bar to one height everywhere. Its contents are 44px tall when the
+   links are laid out in a row and 36px when they have folded into the toggler,
+   which made the bar - and the body offset Quarto derives from it - jump at the
+   fold. 44px is the row height, so the taller state wins and nothing moves.
+   Only the closed bar: an opened menu still grows to hold the stacked links. */
+.navbar > .navbar-container.container-fluid {
+  min-height: 44px;
+}
+
+/* Quarto sets `.navbar-nav .nav-link { padding: .9rem 0 }` directly, which
+   overrides --bs-nav-link-padding-y, so it has to be set as a property too.
+   This is whitespace only; the link text is unchanged. */
+.navbar-nav .nav-link {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Below the fold breakpoint the links stack, so that padding applies to every
+   row and the menu runs down the screen. Tighter still there. Must follow the
+   rule above to win on source order. */
+@media (max-width: 767.98px) {
+  .navbar-nav .nav-link {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+  }
+
+  /* Horizontal inset on phones is .container-fluid's .75rem gutter plus
+     Quarto's `.navbar-container { padding-left: 1em }`, ~34px in total.
+     Reclaim most of it; screen width is scarce here. */
+  .navbar .navbar-container.container-fluid {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  /* Quarto's `.navbar-expand-lg .navbar-nav .nav-link { padding: 0 .6rem }`
+     is not inside a min-width query, so it indents the stacked links too. */
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* the brand block reserves a right margin meant for the horizontal bar */
+  .navbar-brand-container {
+    margin-right: 0;
+  }
+
+  .navbar-nav,
+  .navbar-nav .nav-item {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+/* ------------------------------------------------- page top / bottom -- */
+
+/* `.quarto-container { min-height: calc(100vh - 132px) }` stretches the page
+   to at least viewport height, pinning the footer to the bottom. On short
+   pages (News, Join Us, Home) that opened a ~290px gap before the copyright
+   line. Let the page end where the content ends instead. */
+.quarto-container {
+  /* !important: the framework rule was winning despite equal specificity and
+     later source order. Forced rather than spend longer on the cascade. */
+  min-height: 0 !important;
+}
+
+/* Quarto's own script keeps body padding-top equal to the navbar height, so
+   no hard-coded value is needed here; the 96px default it ships with only
+   applies before that runs. */
+
+/* The navbar's inner .container-fluid is 34px narrower than the bar itself, so
+   the brand and links float in from the edges. Run it full width; the padding
+   is set per breakpoint below (0 where the bar is expanded, 0.25rem on phones),
+   which is why none is declared here. */
+.navbar > .navbar-container.container-fluid {
+  max-width: none;
+}
+
+/* --- footer spacing ---------------------------------------------------- */
+
+/* `.page-rows-contents` reserves a second grid row (`minmax(60px,max-content)`)
+   for a footer, but Quarto renders <footer> outside that grid, so the row sits
+   empty and adds 60px. The first row's `1fr` also stretches short pages. */
+.page-rows-contents {
+  grid-template-rows:
+    [content-top] max-content
+    [content-bottom] max-content
+    [page-bottom];
+}
+
+/* min-height 59.5px for a single line of copyright. */
+.nav-footer {
+  min-height: 0;
+  margin-top: 0.75rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.6rem;
+}
+
+/* --- mobile navbar inset (must follow the general rule above to win) ---- */
+@media (max-width: 767.98px) {
+  .navbar > .navbar-container.container-fluid {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
+
+/* The navbar carries 1rem (17px at Materia's root size) of horizontal padding
+   on top of its inner .container-fluid, so the bar's contents were inset 34px
+   from the header edges. Let the container own the inset instead. */
+/* Quarto's `footer.footer .nav-footer, #quarto-header > nav { padding: 1em }`
+   outranks any `.navbar` / `.nav-footer` rule on ID specificity, which is why
+   the variables and plain class overrides here had no effect. Match its
+   specificity to take control of both. */
+#quarto-header > nav.navbar {
+  padding: 0.47em 0;       /* ~61px tall; 0 horizontal so the bar runs full width */
+}
+
+/* Quarto narrows the body column on any page carrying a sidebar: 800px there
+   against 850px everywhere else, which after the 3em gutters is 749px of text
+   instead of 799px. That hits the Research pages and the People pages alike,
+   both of which carry a section sidebar. The People pages take the .fullcontent
+   variant, whose template also has no right-hand margin columns, so their
+   content was pushed off centre and out of line with the navbar as well.
+
+   Give them all the column the sidebar-less pages get. The template below is
+   Quarto's own for `body.floating`, with only the body-content width raised to
+   match; the margin columns absorb the 50px, and since they are minmax() they
+   give it up before the text does. Every variant is spelled out because each
+   carries a Quarto rule that would otherwise out-specify this one. */
+@media (min-width: 992px) {
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing) .page-columns,
+  body.floating .page-columns,
+  body.floating.slimcontent .page-columns,
+  body.floating.fullcontent .page-columns,
+  body.floating.listing .page-columns {
+    grid-template-columns:
+      [screen-start] 1.5em
+      [screen-start-inset] 5fr
+      [page-start] minmax(25px, 50px)
+      [page-start-inset] minmax(50px, 150px)
+      [body-start-outset] minmax(25px, 50px)
+      [body-start] 1.5em
+      [body-content-start] minmax(500px, calc(850px - 3em))
+      [body-content-end] 1.5em
+      [body-end] minmax(25px, 50px)
+      [body-end-outset] minmax(50px, 150px)
+      [page-end-inset] minmax(25px, 50px)
+      [page-end] 5fr
+      [screen-end-inset] 1.5em
+      [screen-end];
+  }
+}
+
+/* Phones. Quarto has a single-column template for this width and its selector
+   list does cover body.floating - but the 991.98px rule that reserves the
+   sidebar and margin tracks is written later in the same stylesheet, so at phone
+   widths it wins on source order. That left the sidebar pages and Publications
+   on a 500px minimum body column plus reserved margins: wider than the screen,
+   so the cards ran off the right edge while the left gutter stayed put. Restate
+   Quarto's own phone template from a stylesheet that loads afterwards. */
+@media (max-width: 767.98px) {
+  body.floating .page-columns,
+  body.floating.slimcontent .page-columns,
+  body.floating.fullcontent .page-columns,
+  body.floating.listing .page-columns,
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing) .page-columns {
+    grid-template-columns:
+      [screen-start] 1.5em
+      [screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0px, 1fr)
+      [body-content-end body-end body-end-outset page-end-inset page-end screen-end-inset] 1.5em
+      [screen-end];
+  }
+}
+
+/* Line the navbar contents up with the body's content column: brand at its
+   left edge, links ending at its right edge. The bar itself still runs full
+   width; only its inner container is constrained. Quarto's grid gives that
+   column 121px gutters until it caps at 800px, so the same calc reproduces
+   it at every width - hence the 242px, which is the two gutters.
+
+   Bootstrap fights this in two places: .navbar-collapse has flex-grow:1, so
+   it would swallow the container and drag the links away from the right
+   edge, and the brand carries mx-auto. With both cleared, an auto left
+   margin on the collapse is what pins it right (not justify-content, which
+   the empty .quarto-navbar-tools div would otherwise absorb).
+
+   Scoped to the expanded bar - md and up, matching `collapse-below: md`;
+   below that the links stack into the collapsed menu and the full-bleed rules
+   apply. Placed after those rules deliberately: they set max-width:none on the
+   same selector at the same specificity, so source order decides. */
+@media (min-width: 768px) {
+  .navbar > .navbar-container.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar-brand-container.mx-auto {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  #navbarCollapse {
+    flex-grow: 0;
+    flex-basis: auto;
+  }
+
+  /* Quarto puts me-auto on the nav <ul>; it would stretch the ul and undo
+     the flex-grow reset above. */
+  #navbarCollapse > .navbar-nav.me-auto {
+    margin-right: 0 !important;
+  }
+
+  /* Quarto's `.navbar-expand-lg .navbar-nav .nav-link { padding: 0 .6rem }`
+     left the last link's text 10px short of the column edge even though its
+     box lined up. Drop that side's padding so the text is flush. */
+  #navbarCollapse > .navbar-nav > .nav-item:last-child > .nav-link {
+    padding-right: 0;
+  }
+
+  /* nav.navbar is position:relative, so the icon anchors to the full-width
+     bar and stays at the screen edge rather than riding the 800px column. */
+  #quarto-search {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+  }
+
+  /* Quarto emits this div whether or not any tools are configured, and ours is
+     empty. Left in the flow it is still a flex item, so space-between hands it
+     the right end of the bar and the links stop short of the column edge. Drop
+     it from the flow and the two real items take the ends themselves, with no
+     auto margin needed. Delete this rule if navbar tools are ever configured. */
+  .quarto-navbar-tools {
+    display: none;
+  }
+}
+
+/* The column width is breakpoint-specific, because Quarto swaps grid templates
+   at 992px. Above it the sidebar-less column is min(799px, 100% - 242px). Below
+   it Quarto's md template runs 1.5em + fr + 1.5em of gutter each side around a
+   749px column, i.e. min(749px, 100% - 102px) - so the 242px inset left the bar
+   visibly narrower than the page at, say, 900px on Join Us, where the content is
+   nearly full-bleed. */
+@media (min-width: 992px) {
+  .navbar > .navbar-container.container-fluid {
+    width: calc(100% - 242px);
+    max-width: 800px;
+  }
+
+  /* The second selector is Publications: Quarto gives it none of its layout
+     classes, so it falls through to the bare `body .page-columns` rule and now
+     shares the symmetric template above. Sidebar pages (Research, People) and
+     Publications alike split their width three ways, so their
+     text column is narrower than 799px until ~1400px and the calc above would
+     overshoot it. CSS grid grows the body-content track and the two margin
+     tracks in equal steps, freezing each as it hits its limit, which makes the
+     column piecewise linear in the viewport: slope 1/3 while all three still
+     grow, slope 1 once the 150px margins have capped, flat at 799px. The
+     max()/min() reproduces exactly that, so the bar keeps matching and the
+     brand-to-links gap absorbs the difference. Percentages rather than vw, so
+     a scrollbar does not shift it. Below roughly 1250px the column is narrower
+     than the links themselves. A max-content floor stops the bar following it
+     down: without it flex shrinks the brand to an ellipsis and wraps Join Us
+     onto a second line. Below that point the brand-to-links gap is already
+     closed, so the bar simply holds its natural width. */
+  body.floating .navbar > .navbar-container.container-fluid,
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing)
+    .navbar > .navbar-container.container-fluid {
+    width: min(799px, max(calc(100% - 602px), calc((100% - 977px) / 3 + 525px)));
+  }
+}
+
+/* Between the fold breakpoint and 992px every page type gets a different Quarto
+   template - Publications reserves its filter margin, the sidebar pages reserve
+   the TOC - so one centred bar cannot track them all. This matches the plain
+   pages (Home, News, Join Us), where bar and column sit side by side most
+   visibly. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navbar > .navbar-container.container-fluid {
+    width: min(749px, calc(100% - 102px));
+    max-width: none;
+  }
+}
+
+/* The bar's natural width is 632px - 173 of brand plus 459 of links. Where the
+   column is narrower than that the widths cannot match, so the links fold into
+   the toggler rather than overhang. For the sidebar pages and Publications the
+   piecewise column crosses 632px at about 1234px of viewport; 1250 is the
+   rounded-up fold point, the margin covering a scrollbar's worth of difference
+   between the media query's width and the layout width. The sidebar-less pages
+   never cross it above the md breakpoint - their column is 666px even at 768 -
+   so Bootstrap's own `collapse-below: md` is all they need.
+
+   Undoing an expanded navbar means undoing .navbar-expand-md rule by rule; the
+   stacked-menu padding is repeated from the phone block for the same reason. */
+@media (min-width: 768px) and (max-width: 1249.98px) {
+  body.floating .navbar-expand-md,
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing) .navbar-expand-md {
+    flex-wrap: wrap;
+  }
+
+  body.floating .navbar-expand-md .navbar-toggler,
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing) .navbar-expand-md .navbar-toggler {
+    display: block;
+  }
+
+  /* Bootstrap forces the collapse open with display:flex !important above the
+     breakpoint, so closing it again takes !important too. */
+  body.floating .navbar-expand-md #navbarCollapse:not(.show):not(.collapsing),
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing) .navbar-expand-md #navbarCollapse:not(.show):not(.collapsing) {
+    display: none !important;
+  }
+
+  /* Matching the id matters, not just the classes: the expanded-bar block sets
+     a flex-basis on #navbarCollapse, and an id outranks any number of classes.
+     Without it the opened menu stayed on the brand's row instead of wrapping
+     onto its own. */
+  body.floating .navbar-expand-md #navbarCollapse.show,
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing) .navbar-expand-md #navbarCollapse.show,
+  body.floating .navbar-expand-md #navbarCollapse.collapsing,
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing) .navbar-expand-md #navbarCollapse.collapsing {
+    display: block !important;
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  body.floating .navbar-expand-md .navbar-nav,
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing) .navbar-expand-md .navbar-nav {
+    flex-direction: column;
+  }
+
+  /* With the links hidden the flex line is toggler, brand, and the empty tools
+     div; space-between then strands the brand in the middle of the bar. An auto
+     right margin on the brand takes that free space instead, seating it beside
+     the toggler the way the phone layout does. */
+  body.floating .navbar-expand-md .navbar-brand-container,
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing) .navbar-expand-md .navbar-brand-container {
+    margin-right: auto !important;
+  }
+
+  body.floating .navbar-expand-md .navbar-nav .nav-link,
+  body:not(.floating):not(.docked):not(.fullcontent):not(.slimcontent):not(.listing) .navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+  }
+}
+
+footer.footer .nav-footer {
+  padding: 0.35em 1em;     /* was 1em all round for a single line of copyright */
+}
+
+/* Below md, Quarto stacks the footer's three regions into full-width rows and
+   adds margins around them: 3em above the centre block, 1em below each. Our
+   footer only sets `center`, so the left and right rows hold nothing but the
+   &nbsp; placeholders Quarto emits - three rows and ~180px of blank page under
+   the content on a phone, against ~60px on desktop. Keep the single row the
+   wide layout uses; the placeholders collapse to nothing, and real left/right
+   content would still show if it were ever configured. */
+@media (max-width: 767.98px) {
+  .nav-footer {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .nav-footer-left,
+  .nav-footer-right {
+    flex: 1 1 0;
+    margin-bottom: 0;
+  }
+
+  .nav-footer-center {
+    flex: 1 1 auto;
+    order: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* ------------------------------------------------------------------ news -- */
+
+/* Filter chips above the timeline. Deliberately reuses the .pub-chip component
+   from the publications listing so the two pages offer the same control. */
+.news-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.6rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid #ececec;
+}
+
+.news-filter-label {
+  font-size: 0.82rem;
+  color: #777;
+}
+
+.news-reset {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-size: 0.8rem;
+  color: var(--frame-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Year marker. Sits full-width above its entry and so interrupts the rail,
+   which is drawn per row rather than as one line down the whole list. */
+.news-year {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--frame-color);
+  margin: 1.6rem 0 0.9rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #ececec;
+}
+
+.news-item:first-child .news-year { margin-top: 0; }
+
+/* date | dot | text. Each row paints its own rail segment, so adjacent rows
+   read as one continuous line while a year marker cleanly breaks it. */
+.news-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4.4rem 1.75rem 1fr;
+  gap: 0 0.85rem;
+  padding-bottom: 1.15rem;
+}
+
+.news-row::before {
+  content: "";
+  position: absolute;
+  /* centre of the dot column: date column + gap + half a dot */
+  left: calc(4.4rem + 0.85rem + 0.875rem - 1px);
+  top: 0.4rem;
+  bottom: 0;
+  width: 2px;
+  background: #ecd9db;
+}
+
+/* The rail stops at the last entry of each year and of the list. news-filter.js
+   sets .news-tail, which is the only form that stays correct while filtering.
+   The other two selectors are the no-JS fallback: :has() catches an entry whose
+   successor opens a new year, and :last-child catches the end of the list. They
+   only ever cut a rail that should be cut, so they compose safely with the
+   class rather than fighting it. */
+.news-item.news-tail .news-row::before,
+.news-item:has(+ .news-item .news-year:not([hidden])) .news-row::before,
+.news-item:last-child .news-row::before { display: none; }
+
+.news-date {
+  grid-column: 1;
+  text-align: right;
+  padding-top: 0.3rem;
+  font-size: 0.82rem;
+  color: #777;
+  white-space: nowrap;
+}
+
+.news-marker {
+  grid-column: 2;
+  position: relative;      /* lifts the dot above the rail it sits on */
+  z-index: 1;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--frame-color);
+  color: var(--frame-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+}
+
+.news-body { grid-column: 3; }
+
+.news-title {
+  margin: 0;
+  padding-top: 0.2rem;
+  font-weight: 600;
+}
+
+.news-detail {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: #6b6b6b;
+}
+
+.news-link {
+  display: inline-block;
+  margin: 0.4rem 1rem 0 0;
+  font-size: 0.85rem;
+}
+
+/* Below the phone breakpoint the date gutter costs more than it earns: drop it
+   and stack the date above the headline, dot spanning both. */
+@media (max-width: 575.98px) {
+  .news-row {
+    grid-template-columns: 1.75rem 1fr;
+    gap: 0 0.7rem;
+  }
+  .news-row::before { left: calc(0.875rem - 1px); }
+  .news-marker { grid-column: 1; grid-row: 1 / span 2; }
+  .news-date {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+    padding-top: 0.35rem;
+  }
+  .news-body { grid-column: 2; grid-row: 2; }
+  .news-title { padding-top: 0.1rem; }
+}
+
+/* --- research-page references, rendered in the publications house style --- */
+
+/* citeproc gives #refs a hanging indent (margin-left with a negative
+   text-indent) and each entry a further margin. Our entries are blocks, not
+   hanging paragraphs, so all of it is cleared and they align with body text. */
+#refs.hanging-indent { margin-left: 0; text-indent: 0; }
+
+#refs .ref-entry {
+  margin-left: 0;
+  padding-left: 0;
+  text-indent: 0;
+  margin-bottom: 0.9rem;
+}
+
+#refs .ref-title { line-height: 1.35; margin-bottom: 0.1rem; }
+#refs .pub-venue .pub-link { white-space: nowrap; }
+
+/* An entry linked to from a research-page reference renders exactly like any
+   other; only the scroll offset is kept, so the fixed navbar does not cover
+   it when the browser jumps to the anchor. */
+.pub-item:target { scroll-margin-top: 5rem; }
+/* bold but upright -- the journal beside it carries the italic */
+#refs .ref-year { font-weight: 700; font-style: normal; color: #444; }
+#refs .ref-entry .pub-authors { font-size: 0.9rem; margin-bottom: 0.1rem; }
+#refs .ref-entry .pub-venue { font-size: 0.86rem; }
