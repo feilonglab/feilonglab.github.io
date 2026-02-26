@@ -1,0 +1,69 @@
+{
+    "title": "Cross-movie prediction of individualized functional topography",
+    "authors": [
+        {
+            "first": "Guo",
+            "last": "Jiahui",
+            "orcid": "https://orcid.org/0000-0002-1528-9025",
+            "types": ["first"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA",
+                "School of Behavioral and Brain Sciences, University of Texas at Dallas, Richardson, TX, USA"
+            ]
+        },
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": ["corresponding"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Samuel A.",
+            "last": "Nastase",
+            "orcid": "https://orcid.org/0000-0001-7013-5275", 
+            "types": [],
+            "affiliations": [
+                "Princeton Neuroscience Institute and Department of Psychology, Princeton University, Princeton, NJ, USA"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["senior"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Maria Ida",
+            "last": "Gobbini",
+            "orcid": "https://orcid.org/0000-0001-6727-7934",
+            "types": [],
+            "affiliations": [
+                "Department of Medical and Surgical Sciences, University of Bologna, Bologna, Italy",
+                "IRCCS Istituto delle Scienze Neurologiche di Bologna, Bologna, Italy"
+            ]
+        }
+    ],
+    "journal": "eLife",
+    "journal_abbrev": "eLife",
+    "article_type": "Research Article",
+    "dates": {
+        "received": "2023-01-20",
+        "accepted": "2023-06-05",
+        "published_online": "2023-06-19",
+        "published_printed": null 
+    },
+    "year": "2023",
+    "issue": null,
+    "volume": "12",
+    "pages": null,
+    "doi": "10.7554/eLife.86037",
+    "url": "https://doi.org/10.7554/eLife.86037",
+    "altmetric": null,
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1166268545"
+}

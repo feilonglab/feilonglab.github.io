@@ -1,0 +1,51 @@
+{
+    "title": "A computational model of shared fine-scale structure in the human connectome",
+    "authors": [
+        {
+            "first": "J. Swaroop",
+            "last": "Guntupalli",
+            "orcid": "https://orcid.org/0000-0002-0677-5590",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, United States of America",
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, United States of America"
+            ]
+        },
+        {
+            "first": "Feilong",
+            "last": "Ma",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, United States of America",
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, United States of America"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, United States of America",
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, United States of America"
+            ]
+        }
+    ],
+    "journal": "PLOS Computational Biology",
+    "journal_abbrev": "PLoS Comput Bio",
+    "article_type": "Article",
+    "dates": {
+        "received": "2017-04-25",
+        "accepted": "2018-04-03",
+        "published": "2018-04-17"
+    },
+    "year": "2018",
+    "volume": "14",
+    "issue": "4",
+    "pages": null,
+    "doi": "10.1371/journal.pcbi.1006120",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006120",
+    "altmetric": "https://dimensions.altmetric.com/details/37981395",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1103411415"
+}

@@ -1,0 +1,113 @@
+{
+    "title": "Action features dominate cortical representation during natural vision",
+    "authors": [
+        {
+            "first": "Heejung",
+            "last": "Jung",
+            "orcid": "https://orcid.org/0000-0001-5839-1655", 
+            "types": ["corresponding", "first"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA" 
+            ]
+        },
+        {
+            "first": "Xiaochun",
+            "last": "Han",
+            "orcid": null, 
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971", 
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Jane",
+            "last": "Han",
+            "orcid": "https://orcid.org/0000-0002-7110-6502", 
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA" 
+            ]
+        },
+        {
+            "first": "Deepanshi",
+            "last": "Shokeen",
+            "orcid": null, 
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Cara Van",
+            "last": "Uden",
+            "orcid": "https://orcid.org/0000-0001-5409-2279", 
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA",
+                "Department of Computer Science, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Isabella",
+            "last": "Hanson",
+            "orcid": null, 
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Andrew C.",
+            "last": "Connolly",
+            "orcid": "https://orcid.org/0000-0003-4366-8230", 
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Samuel A.",
+            "last": "Nastase",
+            "orcid": "https://orcid.org/0000-0001-7013-5275", 
+            "types": ["corresponding"],
+            "affiliations": [
+                "Princeton Neuroscience Institute and Department of Psychology, Princeton University, Princeton, NJ, USA" 
+            ]
+        }
+    ],
+    "journal": "bioRxiv",
+    "journal_abbrev": "bioRxiv",
+    "article_type": "Preprint",
+    "dates": {
+        "received": null, 
+        "accepted": null, 
+        "published_online": "2025-02-01", 
+        "published_printed": null
+    },
+    "year": "2025",
+    "issue": null,
+    "volume": null,
+    "pages": null,
+    "doi": "10.1101/2025.01.30.635800",
+    "url": "https://doi.org/10.1101/2025.01.30.635800",
+    "altmetric": null, 
+    "dimensions": null 
+}

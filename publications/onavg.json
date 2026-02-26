@@ -1,0 +1,60 @@
+{
+    "title": "A cortical surface template for human neuroscience",
+    "authors": [
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": ["corresponding", "first"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Guo",
+            "last": "Jiahui",
+            "orcid": "https://orcid.org/0000-0002-1528-9025",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA",
+                "School of Behavioral and Brain Sciences, University of Texas at Dallas, Richardson, TX, USA"
+            ]
+        },
+        {
+            "first": "Maria Ida",
+            "last": "Gobbini",
+            "orcid": "https://orcid.org/0000-0001-6727-7934",
+            "types": [],
+            "affiliations": [
+                "Department of Medical and Surgical Sciences, University of Bologna, Bologna, Italy",
+                "IRCCS Istituto delle Scienze Neurologiche di Bologna, Bologna, Italy"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding", "senior"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        }
+    ],
+    "journal": "Nature Methods",
+    "journal_abbrev": "Nat Methods",
+    "article_type": "Article",
+    "dates": {
+        "received": "2023-04-12",
+        "accepted": "2024-06-06",
+        "published_online": "2024-07-16",
+        "published_printed": "2024-09"
+    },
+    "year": "2024",
+    "issue": "9",
+    "volume": "21",
+    "pages": "1736--1742",
+    "doi": "10.1038/s41592-024-02346-y",
+    "url": "https://doi.org/10.1038/s41592-024-02346-y",
+    "altmetric": "https://nature.altmetric.com/details/165419753",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1173833113"
+}

@@ -1,0 +1,77 @@
+{
+    "title": "A model of representational spaces in human cortex",
+    "authors": [
+        {
+            "first": "J. Swaroop",
+            "last": "Guntupalli",
+            "orcid": "https://orcid.org/0000-0002-0677-5590",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Michael",
+            "last": "Hanke",
+            "orcid": "https://orcid.org/0000-0001-6398-6370",
+            "types": [],
+            "affiliations": [
+                "Department of Psychology, University of Magdeburg, Magdeburg, Germany"
+            ]
+        },
+        {
+            "first": "Yaroslav O.",
+            "last": "Halchenko",
+            "orcid": "https://orcid.org/0000-0003-3456-2493",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Andrew C.",
+            "last": "Connolly",
+            "orcid": "https://orcid.org/0000-0003-4366-8230",
+            "types": [],
+            "affiliations": [
+                "Center for Mind/Brain Sciences (CIMeC), University of Trento, Rovereto, Italy"
+            ]
+        },
+        {
+            "first": "Peter J.",
+            "last": "Ramadge",
+            "orcid": "https://orcid.org/0000-0002-3282-216X",
+            "types": [],
+            "affiliations": [
+                "Department of Electrical Engineering, Princeton University, Princeton, NJ, USA"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding", "senior"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA",
+                "CenterforMind/BrainSciences(CIMeC),UniversityofTrento, Rovereto, Trentino, Italy"
+            ]
+        }
+    ],
+    "journal": "Cerebral Cortex",
+    "journal_abbrev": "Cereb Cortex",
+    "article_type": "Original Article",
+    "dates": {
+        "received": "2015-10-21",
+        "accepted": "2016-03-08",
+        "published_online": "2016-03-14",
+        "published_printed": "2016-06"
+    },
+    "year": "2016",
+    "volume": "26",
+    "issue": "6",
+    "pages": "2919--2934",
+    "doi": "10.1093/cercor/bhw068",
+    "url": "https://doi.org/10.1093/cercor/bhw068",
+    "altmetric": "https://dimensions.altmetric.com/details/6194092",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1004755582"
+}

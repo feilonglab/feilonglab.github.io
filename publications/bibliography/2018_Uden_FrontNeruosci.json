@@ -1,0 +1,86 @@
+{
+    "title": "Modeling semantic encoding in a common neural representational space",
+    "authors": [
+        {
+            "first": "Cara E.",
+            "last": "Van Uden",
+            "orcid": "https://orcid.org/0000-0001-5409-2279",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, United States"
+            ]
+        },
+        {
+            "first": "Samuel A.",
+            "last": "Nastase",
+            "orcid": "https://orcid.org/0000-0001-7013-5275",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, United States",
+                "Princeton Neuroscience Institute, Princeton University, Princeton, NJ, United States"
+            ]
+        },
+        {
+            "first": "Andrew C.",
+            "last": "Connolly",
+            "orcid": "https://orcid.org/0000-0003-4366-8230",
+            "types": [],
+            "affiliations": [
+                "Department of Neurology, Geisel School of Medicine, Dartmouth College, Hanover, NH, United States"
+            ]
+        },
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, United States"
+            ]
+        },
+        {
+            "first": "Isabella",
+            "last": "Hansen",
+            "orcid": "https://orcid.org/0000-0001-7145-3865",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, United States"
+            ]
+        },
+        {
+            "first": "M. Ida",
+            "last": "Gobbini",
+            "orcid": "https://orcid.org/0000-0001-6727-7934",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, United States",
+                "Dipartimento di Medicina Specialistica, Diagnostica e Sperimentale (DIMES), Medical School, University of Bologna, Bologna, Italy"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, United States"
+            ]
+        }
+    ],
+    "journal": "Frontiers in Neuroscience",
+    "journal_abbrev": "Front Neurosci",
+    "article_type": "Research Article",
+    "dates": {
+        "received": "2018-03-25",
+        "accepted": "2018-06-11",
+        "published": "2018-07-10"
+    },
+    "year": "2018",
+    "volume": "12",
+    "issue": null,
+    "pages": "437",
+    "doi": "10.3389/fnins.2018.00437",
+    "url": "https://doi.org/10.3389/fnins.2018.00437",
+    "altmetric": "https://dimensions.altmetric.com/details/43589940",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1105427142"
+}

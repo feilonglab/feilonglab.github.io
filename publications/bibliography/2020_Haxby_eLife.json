@@ -1,0 +1,54 @@
+{
+    "title": "Hyperalignment: Modeling shared information encoded in idiosyncratic cortical topographies",
+    "authors": [
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, United States"
+            ]
+        },
+        {
+            "first": "J. Swaroop",
+            "last": "Guntupalli",
+            "orcid": "",
+            "types": [],
+            "affiliations": [
+                "Vicarious AI, Union City, United States"
+            ]
+        },
+        {
+            "first": "Samuel A.",
+            "last": "Nastase",
+            "orcid": "https://orcid.org/0000-0001-7013-5275",
+            "types": [],
+            "affiliations": [
+                "Princeton Neuroscience Institute, Princeton, United States"
+            ]
+        },
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, United States"
+            ]
+        }
+    ],
+    "journal": "eLife",
+    "journal_abbrev": "eLife",
+    "article_type": "Review Article",
+    "dates": {
+        "received": "2020-03-12",
+        "accepted": "2020-05-14",
+        "published_online": "2020-06-02",
+        "published_printed": null
+    },
+    "year": "2020",
+    "volume": "9",
+    "pages": "e56601",
+    "doi": "10.7554/eLife.56601"
+}

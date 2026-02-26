@@ -1,0 +1,114 @@
+{
+    "title": "Hybrid hyperalignment: A single high-dimensional model of shared information embedded in cortical patterns of response and functional connectivity",
+    "authors": [
+        {
+            "first": "Erica L.",
+            "last": "Busch",
+            "orcid": "https://orcid.org/0000-0002-5906-9622",
+            "types": ["corresponding", "first"],
+            "affiliations": [
+                "Department of Psychology, Yale University, New Haven, CT, USA",
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Lukas",
+            "last": "Slipski",
+            "orcid": "https://orcid.org/0000-0002-3196-8378",
+            "types": ["corresponding", "first"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "J. Swaroop",
+            "last": "Guntupalli",
+            "orcid": "https://orcid.org/0000-0002-0677-5590",
+            "types": [],
+            "affiliations": [
+                "Vicarious AI, Union City, CA, USA"
+            ]
+        },
+        {
+            "first": "Matteo",
+            "last": "Visconti di Oleggio Castello",
+            "orcid": "https://orcid.org/0000-0001-7931-5272",
+            "types": [],
+            "affiliations": [
+                "Helen Wills Neuroscience Institute, University of California, Berkeley, USA"
+            ]
+        },
+        {
+            "first": "Jeremy F.",
+            "last": "Huckins",
+            "orcid": "https://orcid.org/0000-0003-0106-7808",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Samuel A.",
+            "last": "Nastase",
+            "orcid": "https://orcid.org/0000-0001-7013-5275", 
+            "types": [],
+            "affiliations": [
+                "Princeton Neuroscience Institute, Princeton University, Princeton, NJ, USA"
+            ]
+        },
+        {
+            "first": "M. Ida",
+            "last": "Gobbini",
+            "orcid": "https://orcid.org/0000-0001-6727-7934",
+            "types": [],
+            "affiliations": [
+                "Department of Experimental, Diagnostic, and Specialty Medicine, Medical School, University of Bologna, Italy",
+                "Cognitive Science Program, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Tor D.",
+            "last": "Wager",
+            "orcid": "https://orcid.org/0000-0002-1936-5574",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding", "senior"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        }
+    ],
+    "journal": "NeuroImage",
+    "journal_abbrev": "NeuroImage",
+    "article_type": "Research Article",
+    "dates": {
+        "received": "2020-11-25",
+        "accepted": "2021-03-14",
+        "published_online": "2021-03-21", 
+        "published_printed": "2021-03-21"
+    },
+    "year": "2021",
+    "issue": null,
+    "volume": "233",
+    "pages": "117975",
+    "doi": "10.1016/j.neuroimage.2021.117975",
+    "url": "https://doi.org/10.1016/j.neuroimage.2021.117975",
+    "altmetric": "https://dimensions.altmetric.com/details/102558534",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1136555741"
+}

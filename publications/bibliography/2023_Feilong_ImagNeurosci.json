@@ -1,0 +1,77 @@
+{
+    "title": "The individualized neural tuning model: Precise and generalizable cartography of functional architecture in individual brains",
+    "authors": [
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": ["corresponding", "first"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Samuel A.",
+            "last": "Nastase",
+            "orcid": "https://orcid.org/0000-0001-7013-5275", 
+            "types": [],
+            "affiliations": [
+                "Princeton Neuroscience Institute and Department of Psychology, Princeton University, Princeton, NJ, USA"
+            ]
+        },
+        {
+            "first": "Jiahui",
+            "last": "Guo",
+            "orcid": "https://orcid.org/0000-0002-1528-9025",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Yaroslav O.",
+            "last": "Halchenko",
+            "orcid": "https://orcid.org/0000-0003-3456-2493", 
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Maria Ida",
+            "last": "Gobbini",
+            "orcid": "https://orcid.org/0000-0001-6727-7934",
+            "types": [],
+            "affiliations": [
+                "Department of Medical and Surgical Sciences, University of Bologna, Bologna, Italy",
+                "IRCCS Istituto delle Scienze Neurologiche di Bologna, Bologna, Italy"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding", "senior"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        }
+    ],
+    "journal": "Imaging Neuroscience",
+    "journal_abbrev": "Imaging Neurosci (Camb)",
+    "article_type": "Article",
+    "dates": {
+        "received": "2023-09-08",
+        "accepted": "2023-11-17",
+        "published_online": "2023-11-22",
+        "published_printed": "2023-12"
+    },
+    "year": "2023",
+    "issue": null,
+    "volume": "1",
+    "pages": "1–20",
+    "doi": "10.1162/imag_a_00032",
+    "url": "https://doi.org/10.1162/imag_a_00032",
+    "altmetric": "https://dimensions.altmetric.com/details/156727035",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1165537593"
+}

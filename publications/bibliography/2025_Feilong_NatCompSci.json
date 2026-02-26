@@ -1,0 +1,36 @@
+{
+    "title": "Advancing neural decoding with deep learning: Computational neuroscience",
+    "authors": [
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": ["corresponding"],
+            "affiliations": ["Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"]
+        },
+        {
+            "first": "Yuqi",
+            "last": "Zhang",
+            "orcid": "https://orcid.org/0009-0002-0687-1096",
+            "types": [],
+            "affiliations": ["Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"]
+        }
+    ],
+    "journal": "Nature Computational Science",
+    "journal_abbrev": "Nat Comput Sci",
+    "article_type": "Comment",
+    "dates": {
+        "received": null,
+        "accepted": null,
+        "published_online": "2025-07-11",
+        "published_printed": "2025-07"
+    },
+    "year": "2025",
+    "issue": "7",
+    "volume": "5",
+    "pages": "516–517",
+    "doi": "10.1038/s43588-025-00837-2",
+    "url": "https://doi.org/10.1038/s43588-025-00837-2",
+    "altmetric": "https://dimensions.altmetric.com/details/179281537",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1190679698"
+}

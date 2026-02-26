@@ -1,0 +1,60 @@
+{
+    "title": "Reliable individual differences in fine-grained cortical functional architecture",
+    "authors": [
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": ["first"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Samuel A.",
+            "last": "Nastase",
+            "orcid": "https://orcid.org/0000-0001-7013-5275", 
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA",
+                "Princeton Neuroscience Institute, Princeton University, Princeton, NJ, USA"
+            ]
+        },
+        {
+            "first": "J. Swaroop",
+            "last": "Guntupalli",
+            "orcid": "https://orcid.org/0000-0002-0677-5590",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA",
+                "Vicarious AI, Union City, CA, USA"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding", "senior"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        }
+    ],
+    "journal": "NeuroImage",
+    "journal_abbrev": "NeuroImage",
+    "article_type": "Research Article",
+    "dates": {
+        "received": "2018-04-09",
+        "accepted": "2018-08-13",
+        "published_online": "2018-08-15",
+        "published_printed": "2018-12-01"
+    },
+    "year": "2018",
+    "issue": null,
+    "volume": "183",
+    "pages": "375–386",
+    "doi": "10.1016/j.neuroimage.2018.08.029",
+    "url": "https://doi.org/10.1016/j.neuroimage.2018.08.029",
+    "altmetric": "https://dimensions.altmetric.com/details/46535559",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1106155781"
+}

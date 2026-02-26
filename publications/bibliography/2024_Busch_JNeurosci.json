@@ -1,0 +1,94 @@
+{
+    "title": "Dissociation of Reliability, Heritability, and Predictivity in Coarse- and Fine-Scale Functional Connectomes during Development",
+    "authors": [
+        {
+            "first": "Erica L.",
+            "last": "Busch",
+            "orcid": "https://orcid.org/0000-0002-5906-9622",
+            "types": ["corresponding", "first"],
+            "affiliations": [
+                "Department of Psychology, Yale University, New Haven, Connecticut, 06510"
+            ]
+        },
+        {
+            "first": "Kristina M.",
+            "last": "Rapuano",
+            "orcid": "https://orcid.org/0000-0003-4682-098X",
+            "types": [],
+            "affiliations": [
+                "Department of Psychology, Yale University, New Haven, Connecticut, 06510" 
+            ]
+        },
+        {
+            "first": "Kevin M.",
+            "last": "Anderson",
+            "orcid": null, 
+            "types": [],
+            "affiliations": [
+                "Department of Psychology, Yale University, New Haven, Connecticut, 06510" 
+            ]
+        },
+        {
+            "first": "Monica D.",
+            "last": "Rosenberg",
+            "orcid": "https://orcid.org/0000-0001-6179-4025", 
+            "types": [],
+            "affiliations": [
+                "Department of Psychology, University of Chicago, Chicago, Illinois, 60637" 
+            ]
+        },
+        {
+            "first": "Richard",
+            "last": "Watts",
+            "orcid": "https://orcid.org/0009-0004-5092-8314", 
+            "types": [],
+            "affiliations": [
+                "Department of Psychology, Yale University, New Haven, Connecticut, 06510"
+            ]
+        },
+        {
+            "first": "B. J.",
+            "last": "Casey",
+            "orcid": null, 
+            "types": [],
+            "affiliations": [
+                "Department of Psychology, Yale University, New Haven, Connecticut, 06510"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["senior"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, New Hampshire, 03755"
+            ]
+        },
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": ["corresponding"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, New Hampshire, 03755"
+            ]
+        }
+    ],
+    "journal": "Journal of Neuroscience",
+    "journal_abbrev": "J Neurosci",
+    "article_type": "Featured Article",
+    "dates": {
+        "received": "2023-04-12",
+        "accepted": "2023-11-20",
+        "published_online": "2024-02-07",
+        "published_printed": "2024-02-07"
+    },
+    "year": "2024",
+    "issue": "6",
+    "volume": "44",
+    "pages": null,
+    "doi": "10.1523/JNEUROSCI.0735-23.2023",
+    "url": "https://doi.org/10.1523/JNEUROSCI.0735-23.2023",
+    "altmetric": "https://dimensions.altmetric.com/details/159490650",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1167373998"
+}

@@ -1,0 +1,30 @@
+version: 1
+project:
+  title: Feilong Lab
+  copyright: '2025-2026, the Feilong Lab'
+  github: feilonglab/feilonglab.github.io.git
+  bibliography:
+    - publications/pubs.bib
+  toc:
+    - file: index.md
+    - file: people/index.md
+    - file: research/index.md
+      children:
+        - file: research/individual_differences.md
+        - file: research/templates.md
+        - file: research/species_systems.md
+        - file: research/pred_responses.md
+        - file: research/hyperalignment.md
+        - file: research/future.md
+    - file: publications/index.md
+    - file: news.md
+  plugins:
+    - _static/fontawesome.mjs
+site:
+  options:
+    logo: assets/feilonglab.png
+    favicon: assets/favicon.ico
+    folders: true
+    style: _static/custom.css
+  template: book-theme
+

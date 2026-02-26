@@ -1,0 +1,47 @@
+{
+    "title": "Boosting Hyperalignment Performance with Age-specific Templates",
+    "authors": [
+        {
+            "first": "Yuqi",
+            "last": "Zhang",
+            "orcid": "https://orcid.org/0009-0002-0687-1096",
+            "types": ["first"],
+            "affiliations": ["Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"]
+        },
+        {
+            "first": "Maria Ida",
+            "last": "Gobbini",
+            "orcid": "https://orcid.org/0000-0001-6727-7934",
+            "types": [],
+            "affiliations": ["University of Bologna", "Dartmouth College"]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": [],
+            "affiliations": ["Dartmouth College"]
+        },
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": [],
+            "affiliations": ["Dartmouth College"]
+        }
+    ],
+    "journal": "bioRxiv",
+    "journal_abbrev": "bioRxiv",
+    "article_type": "Preprint",
+    "dates": {
+        "received": null,
+        "accepted": null,
+        "published_online": "2025-02-25",
+        "published_printed": null
+    },
+    "year": "2025",
+    "doi": "10.1101/2025.02.19.639148",
+    "url": "https://doi.org/10.1101/2025.02.19.639148",
+    "altmetric": null,
+    "dimensions": null
+}

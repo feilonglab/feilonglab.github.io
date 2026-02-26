@@ -1,0 +1,49 @@
+{
+    "title": "The neural basis of intelligence in fine-grained cortical topographies",
+    "authors": [
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": ["first"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "J. Swaroop",
+            "last": "Guntupalli",
+            "orcid": "https://orcid.org/0000-0002-0677-5590",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding", "senior"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        }
+    ],
+    "journal": "eLife",
+    "journal_abbrev": "eLife",
+    "article_type": "Research Article",
+    "dates": {
+        "received": "2020-10-15",
+        "accepted": "2021-03-05",
+        "published_online": "2021-03-08",
+        "published_printed": "2021-03-08"
+    },
+    "year": "2021",
+    "issue": null,
+    "volume": "10",
+    "pages": null,
+    "doi": "10.7554/eLife.64058",
+    "url": "https://doi.org/10.7554/eLife.64058",
+    "altmetric": null,
+    "dimensions": null
+}

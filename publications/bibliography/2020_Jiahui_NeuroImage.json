@@ -1,0 +1,85 @@
+{
+    "title": "Predicting individual face-selective topography using naturalistic stimuli",
+    "authors": [
+        {
+            "first": "Guo",
+            "last": "Jiahui",
+            "orcid": "https://orcid.org/0000-0002-4201-7711",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, NH, USA"
+            ]
+        },
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, NH, USA"
+            ]
+        },
+        {
+            "first": "Matteo",
+            "last": "Visconti di Oleggio Castello",
+            "orcid": "https://orcid.org/0000-0001-7931-5272",
+            "types": [],
+            "affiliations": [
+                "Helen Wills Neuroscience Institute, University of California, Berkeley, CA, USA"
+            ]
+        },
+        {
+            "first": "J. Swaroop",
+            "last": "Guntupalli",
+            "orcid": "https://orcid.org/0000-0002-0677-5590",
+            "types": [],
+            "affiliations": [
+                "Vicarious AI, Union City, CA, USA"
+            ]
+        },
+        {
+            "first": "Vassiki",
+            "last": "Chauhan",
+            "orcid": "https://orcid.org/0000-0002-9612-2402",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, NH, USA"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, NH, USA"
+            ]
+        },
+        {
+            "first": "M. Ida",
+            "last": "Gobbini",
+            "orcid": "https://orcid.org/0000-0001-6727-7934",
+            "types": ["corresponding"],
+            "affiliations": [
+                "Cognitive Science, Dartmouth College, NH, USA",
+                "Dipartimento di Medicina Specialistica, Diagnostica e Sperimentale, Università di Bologna, Bologna, Italy"
+            ]
+        }
+    ],
+    "journal": "NeuroImage",
+    "journal_abbrev": "NeuroImage",
+    "article_type": "Article",
+    "dates": {
+        "received": "2019-08-10",
+        "accepted": "2019-12-09",
+        "published_online": "2019-12-13",
+        "published_printed": "2020-08-01"
+    },
+    "year": "2020",
+    "volume": "216",
+    "pages": null,
+    "doi": "10.1016/j.neuroimage.2019.116458",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1053811919310493",
+    "altmetric": "https://dimensions.altmetric.com/details/72734273",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1123345486"
+}

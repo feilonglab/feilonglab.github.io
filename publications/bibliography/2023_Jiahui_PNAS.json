@@ -1,0 +1,77 @@
+{
+    "title": "Modeling naturalistic face processing in humans with deep convolutional neural networks reveals category-based representations",
+    "authors": [
+        {
+            "first": "Guo",
+            "last": "Jiahui",
+            "orcid": "https://orcid.org/0000-0002-1528-9025",
+            "types": ["corresponding","first"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": ["corresponding"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Matteo",
+            "last": "Visconti di Oleggio Castello",
+            "orcid": "https://orcid.org/0000-0001-7931-5272",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Samuel A.",
+            "last": "Nastase",
+            "orcid": "https://orcid.org/0000-0001-7013-5275", 
+            "types": [],
+            "affiliations": [
+                "Princeton Neuroscience Institute and Department of Psychology, Princeton University, Princeton, NJ, USA"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding", "senior"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Maria Ida",
+            "last": "Gobbini",
+            "orcid": "https://orcid.org/0000-0001-6727-7934",
+            "types": ["corresponding"],
+            "affiliations": [
+                "Department of Medical and Surgical Sciences, University of Bologna, Bologna, Italy",
+                "IRCCS Istituto delle Scienze Neurologiche di Bologna, Bologna, Italy"
+            ]
+        }
+    ],
+    "journal": "Proceedings of the National Academy of Sciences",
+    "journal_abbrev": "PNAS",
+    "article_type": "Research Article",
+    "dates": {
+        "received": "2023-03-16",
+        "accepted": "2023-09-11",
+        "published_online": "2023-10-17",
+        "published_printed": "2023-10-24" 
+    },
+    "year": "2023",
+    "issue": "43",
+    "volume": "120",
+    "pages": null,
+    "doi": "10.1073/pnas.2304085120",
+    "url": "https://doi.org/10.1073/pnas.2304085120",
+    "altmetric": "https://dimensions.altmetric.com/details/155471407",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1164990127"
+}

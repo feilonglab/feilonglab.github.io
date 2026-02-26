@@ -1,0 +1,76 @@
+{
+    "title": "Hyper-HMM: aligning human brains and semantic features in a common latent event space",
+    "authors": [
+        {
+            "first": "Caroline",
+            "last": "Lee",
+            "orcid": "https://orcid.org/0000-0002-0171-7260",
+            "types": ["first"],
+            "affiliations": [
+                "Department of Psychology Columbia University, New York, NY, USA"
+            ]
+        },
+        {
+            "first": "Jane",
+            "last": "Han",
+            "orcid": "https://orcid.org/0000-0002-7110-6502",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Ma",
+            "last": "Feilong",
+            "orcid": "https://orcid.org/0000-0002-6838-3971",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Guo",
+            "last": "Jiahui",
+            "orcid": "https://orcid.org/0000-0002-1528-9025",
+            "types": [],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["senior"],
+            "affiliations": [
+                "Center for Cognitive Neuroscience, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Christopher",
+            "last": "Baldassano",
+            "orcid": "https://orcid.org/0000-0003-3540-5019",
+            "types": ["corresponding", "senior"],
+            "affiliations": [
+                "Department of Psychology, Columbia University, New York, NY, USA"
+            ]
+        }
+    ],
+    "journal": "NeurIPS",
+    "journal_abbrev": "NeurIPS",
+    "article_type": "Conference Paper",
+    "dates": {
+        "received": "MISSING_NEED_SEARCH", 
+        "accepted": "2023-09", 
+        "published_online": "2023-12", 
+        "published_printed": null
+    },
+    "year": "2023",
+    "issue": null,
+    "volume": "37", 
+    "pages": null,
+    "doi": null,
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/558a100caa93422df215fadb9e9b1dd7-Abstract-Conference.html",
+    "altmetric": null,
+    "dimensions": null
+}

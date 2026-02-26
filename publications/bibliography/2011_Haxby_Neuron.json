@@ -1,0 +1,96 @@
+{
+    "title": "A common, high-dimensional model of the representational space in human ventral temporal cortex",
+    "authors": [
+        {
+            "first": "James V.",
+            "last": "Haxby",
+            "orcid": "https://orcid.org/0000-0002-6558-3118",
+            "types": ["corresponding", "senior"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA",
+                "Center for Mind/Brain Sciences (CIMeC), University of Trento, Rovereto, Italy"
+            ]
+        },
+        {
+            "first": "J. Swaroop",
+            "last": "Guntupalli",
+            "orcid": "https://orcid.org/0000-0002-0677-5590",
+            "types": ["first"],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Andrew C.",
+            "last": "Connolly",
+            "orcid": "https://orcid.org/0000-0003-4366-8230",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Yaroslav O.",
+            "last": "Halchenko",
+            "orcid": "https://orcid.org/0000-0003-3456-2493",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Bryan R.",
+            "last": "Conroy",
+            "orcid": null,
+            "types": [],
+            "affiliations": [
+                "Department of Electrical Engineering, Princeton University, Princeton NJ, USA"
+            ]
+        },
+        {
+            "first": "M. Ida",
+            "last": "Gobbini",
+            "orcid": "https://orcid.org/0000-0001-6727-7934",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA",
+                "Dipartimento di Psicologia, Universitá di Bologna, Bologna, Italy"
+            ]
+        },
+        {
+            "first": "Michael",
+            "last": "Hanke",
+            "orcid": "https://orcid.org/0000-0001-6398-6370",
+            "types": [],
+            "affiliations": [
+                "Department of Psychological and Brain Sciences, Dartmouth College, Hanover, NH, USA"
+            ]
+        },
+        {
+            "first": "Peter J.",
+            "last": "Ramadge",
+            "orcid": "https://orcid.org/0000-0002-3282-216X",
+            "types": [],
+            "affiliations": [
+                "Department of Electrical Engineering, Princeton University, Princeton, NJ, USA"
+            ]
+        }
+    ],
+    "journal": "Neuron",
+    "journal_abbrev": "Neuron",
+    "article_type": "Article",
+    "dates": {
+        "received": "2011-03-24",
+        "accepted": "2011-08-26",
+        "published_online": "2011-10-20",
+        "published_printed": "2011-10-20"
+    },
+    "year": "2011",
+    "volume": "72",
+    "issue": "2",
+    "pages": "404--416",
+    "doi": "10.1016/j.neuron.2011.08.026",
+    "url": "https://doi.org/10.1016/j.neuron.2011.08.026",
+    "altmetric": "https://dimensions.altmetric.com/details/421423",
+    "dimensions": "https://app.dimensions.ai/details/publication/pub.1026461044"
+}
