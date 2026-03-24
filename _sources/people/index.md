@@ -19,6 +19,26 @@ He completed his Ph.D. in Cognitive Neuroscience at Dartmouth College under the 
 He continued his research at Dartmouth as a Postdoctoral Fellow and later as a Research Assistant Professor.
 In 2025, Feilong joined the University of South Carolina, where he is expanding his research to the neural mechanisms of language abilities, aphasia, and other disorders.
 
+
+```{image} cheng.png
+:alt: Cheng Xiao's headshot
+:height: 200px
+:align: left
+:class: headshot
+```
+
+(cheng)=
+## Dr. Cheng Xiao
+
+**Postdoctoral Fellow** <br>
+{fas}`envelope` [cxiao@mailbox.sc.edu](mailto:cxiao@mailbox.sc.edu) | {fab}`google-scholar` [Google Scholar](https://scholar.google.com/citations?user=KOMs8L8AAAAJ&hl=en&oi=sra) {fab}`orcid` [0000-0001-5057-9143](https://orcid.org/0000-0001-5057-9143) <br>
+{fab}`github` [chengxiaocx](https://github.com/chengxiaocx)
+
+Dr. Cheng Xiao completed her PhD in Linguistics at the University of South Carolina under the supervision of Drs. Jiang Liu and Rutvik Desai.
+Her doctoral dissertation examined how native and non-native speakers perceive and process emotional information conveyed through semantic and prosodic channels.
+In 2026, Cheng joined the Feilong Lab, where she uses computational methods and neuroimaging data to investigate individual differences in language processing and learning.
+
+
 ```{image} ava.jpg
 :alt: AvA Ran's headshot
 :height: 200px
