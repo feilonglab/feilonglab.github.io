@@ -66,7 +66,7 @@ Ziyi Ding earned both her Bachelor’s and Master’s degrees in Psychology from
 ## Wanzhi (Libby) Lyu
 
 **Research Assistant** <br>
-{fas}`envelope` [wanzlyu@sc.edu](mailto:wanzlyu@sc.edu) | {fab}`google-scholar` [Google Scholar](https://scholar.google.com/citations?hl=en&user=hUITS_EAAAAJ) | {fab}`orcid` [0009-0004-2038-4512](https://orcid.org/0009-0004-2038-4512) <br>
+{fas}`envelope` [wanzlyu@sc.edu](mailto:wanzlyu@sc.edu) | {fab}`google-scholar` [Google Scholar](https://scholar.google.com/citations?user=hUITS_EAAAAJ&hl=en) | {fab}`orcid` [0009-0004-2038-4512](https://orcid.org/0009-0004-2038-4512) <br>
 {fab}`github` [libbylyu](https://github.com/libbylyu)
 
 Libby Lyu received her B.S. in Psychology from the University of Iowa, where she worked with Drs. Eliot Hazeltine and Nicholas Trapp, and her M.A. in Social Sciences from the University of Chicago, where she worked with Dr. Monica Rosenberg. Before joining the Feilong Lab at the University of South Carolina, she worked as a research assistant at Boys Town National Research Hospital. Libby is broadly interested in how individual differences in brain function support cognition and behavior. She is particularly interested in how these differences vary across contexts and emotional states, and how the brain flexibly supports cognitive processes under different conditions. She plans to pursue a Ph.D. in psychology.
